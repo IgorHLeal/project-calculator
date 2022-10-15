@@ -1,13 +1,8 @@
 const result = document.getElementById('result');
 
-function insert(num) {
-  let number = result.innerHTML;
-  result.innerHTML = number + num;
-}
+function insert(num) { result.innerHTML += num }
 
-function clean() {
-  result.innerHTML = '';
-}
+function clean() { result.innerHTML = '' }
 
 function back() {
   let resultFinal = result.innerHTML;
@@ -15,17 +10,8 @@ function back() {
 }
 
 function calcular() {
-  let resultFinal = result.innerHTML;
-
-  resultFinal ? result.innerHTML = eval(resultFinal) : result.innerHTML = 0;
-  
-  /* if(resultFinal) {
-    result.innerHTML = eval(resultFinal);
-  } else {
-    result.innerHTML = "Nada..."
-  } */
+  result.innerHTML ? result.innerHTML = eval(result.innerHTML) : result.innerHTML = 0;
 }
-
 
 // Referências
 
